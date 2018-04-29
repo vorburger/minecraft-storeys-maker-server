@@ -11,3 +11,9 @@ Here's what's currently preventing that:
 - [ ] unclear how to integrate; maybe `oc new-build ... --source-image=... --source-image-path=...` ?
 
 ## How to use
+
+    oc new-build https://github.com/vorburger/s2i-minecraft-server/
+
+    oc new-app https://github.com/vorburger/minecraft-storeys-maker-server.git
+
+    oc start-build minecraft-storeys-maker-server --from-dir=. --follow

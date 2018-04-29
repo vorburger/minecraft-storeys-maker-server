@@ -1,9 +1,9 @@
 # minecraft-storeys-maker-server
 
 Container image of [minecraft-storeys-maker](https://github.com/vorburger/minecraft-storeys-maker)
-mod plugin deployed into to a [Minecraft-server](https://github.com/vorburger/s2i-minecraft-server/).
+mod plugin deployed into to a [Minecraft-server](https://github.com/vorburger/s2i-minecraft-server).
 
-This is an UGLY HACK with a BINARY JAR which I'm hoping to remove
+This project is an UGLY HACK with a BINARY JAR which I'm hoping to eventually entirely remove
 when I can finally get minecraft-storeys-maker fully S2I enabled.
 Here's what's currently preventing that:
 
@@ -15,13 +15,13 @@ Here's what's currently preventing that:
 
 ## How to use
 
-    oc new-build https://github.com/vorburger/s2i-minecraft-server/
+    oc new-build https://github.com/vorburger/s2i-minecraft-server.git
 
     oc new-app https://github.com/vorburger/minecraft-storeys-maker-server.git
 
 
 ### How to locally test
 
-    cp ../minecraft-storeys-maker/web/build/libs/web-1.0.0-SNAPSHOT-all.jar src/mods
+    cp ../minecraft-storeys-maker/web/build/libs/web-1.0.0-SNAPSHOT-all.jar src/mods/
 
     oc start-build minecraft-storeys-maker-server --from-dir=. --follow

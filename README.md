@@ -15,7 +15,7 @@ Here's what's currently preventing that:
 
 ## How to use
 
-    oc new-build https://github.com/vorburger/s2i-minecraft-server.git
+    oc new-build fabric8/s2i-java~https://github.com/vorburger/s2i-minecraft-server.git
 
     oc new-app https://github.com/vorburger/minecraft-storeys-maker-server.git
 
